@@ -7,7 +7,15 @@ public class IterativeInsertLast implements InsertLastStrategy {
         // TODO: implement iteratively.
         // Hints:
         // - If head == null, return new node.
+        if (head == null) {
+            return new ListNode(value);
+        }
         // - Otherwise, walk to tail and append; return original head.
+        ListNode current = head;
+        while (current.next != null) {
+            current =  current.next;
+        }
+        current.next = new ListNode(value);
         return head; // placeholder
     }
 
@@ -18,7 +26,7 @@ public class IterativeInsertLast implements InsertLastStrategy {
 
     public static void main(String[] args) {
         // Run with: -Xms64m -Xmx64m -Xlog:gc*
-        int n = args.length > 0 ? Integer.parseInt(args[0]) : 5000;
+        int n = args.length > 0 ? Integer.parseInt(args[0]) : 50000;
         int trials = args.length > 1 ? Integer.parseInt(args[1]) : 3;
 
         // Build initial list

@@ -1,0 +1,3 @@
+The iterative fibbonacci runs fast. it starts from a=0 and b=1, and then loops through and spits out each number.
+recursive fibonacci code looks pretty, its elegant, but for each longer - with a complexity of 2^n. theres one recrusive call within a second one
+the same thing can be seen from the linked list implementations. to add something to the end iteratively is simple, it goes through the list once. but for recursive, it checks if each one is the last, and if its not then it goes back in with another recursive thing again and again.
